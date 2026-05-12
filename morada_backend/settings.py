@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-zpp&-x@qqz&f&jyu6z-$w_z_jg=9@fb3o9iwk9oe^_^x%n39e3
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+
 ALLOWED_HOSTS = ["*"]
 
 
@@ -162,8 +163,8 @@ EMAIL_HOST_PASSWORD = 'knna usmt ylrs zlro'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(days=7),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
