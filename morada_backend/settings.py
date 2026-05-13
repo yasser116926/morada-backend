@@ -27,8 +27,11 @@ SECRET_KEY = 'django-insecure-zpp&-x@qqz&f&jyu6z-$w_z_jg=9@fb3o9iwk9oe^_^x%n39e3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
-
+ALLOWED_HOSTS = [
+    "morada-backend-0e0j.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 # Application definition
 
@@ -169,3 +172,7 @@ SIMPLE_JWT = {
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://morada-frontend-apbb-1gvxfzpm7-yasser116926s-projects.vercel.app",
+]
