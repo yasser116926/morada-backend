@@ -46,12 +46,15 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'rest_framework_simplejwt',
-    
+    "corsheaders",
 
 
 ]
 
 MIDDLEWARE = [
+
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     'corsheaders.middleware.CorsMiddleware',  # MUST BE FIRST
 
     'django.middleware.security.SecurityMiddleware',
@@ -176,3 +179,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 CSRF_TRUSTED_ORIGINS = [
     "https://morada-frontend-apbb-1gvxfzpm7-yasser116926s-projects.vercel.app",
 ]
+
