@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'rest_framework_simplejwt',
+    'cloudinary',
+    'cloudinary_storage',
 
 
 ]
@@ -178,4 +180,17 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 CSRF_TRUSTED_ORIGINS = [
     "https://morada-frontend-apbb-1gvxfzpm7-yasser116926s-projects.vercel.app",
 ]
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': "duwzhscip",
+    'API_KEY': '255426463565411',
+    'API_SECRET': '8I4uUP8l9wX5e7Z_ifn52ALDEoE',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+import cloudinary
+import cloudinary.uploader
+from cloudinary.utils import cloudinary_url
 
