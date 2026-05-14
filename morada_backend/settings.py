@@ -142,6 +142,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # ✅ CORS SETTINGS (FIXED)
 
 CORS_ALLOW_ALL_ORIGINS = True  # allow all during development
+CORS_ALLOW_CREDENTIALS = True
 
 from corsheaders.defaults import default_headers
 
